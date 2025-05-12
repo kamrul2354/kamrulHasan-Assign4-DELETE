@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <title>Product Catalog Management</title>
+    <link rel="stylesheet" th:href="@{/css/main.css}" />
+</head>
+<body>
+    <div class="container">
+        <h1>Product Catalog Management</h1>
+        <div class="button-group">
+            <a th:href="@{/productDataInput}" class="action-button">Add a Product</a>
+            <a th:href="@{/listOfProducts}" class="action-button">List All Products</a>
+    		<a th:href="@{/editableListOfProducts}" class="action-button">Edit Products</a>
+    		<a th:href="@{/listDeletableProducts}" class="action-button">Delete Products</a>
+            <a th:href="@{/productsByBrand}" class="action-button">List Products by Brand</a>
+            <a th:href="@{/productsByQuantity}" class="action-button">List Products by Quantity Threshold</a>
+        </div>
+    </div>
+    <div th:insert="fragments/footer :: footer"></div>
+</body>
+</html>

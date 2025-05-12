@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <title>Product Added</title>
+	<link rel="stylesheet" th:href="@{/css/main.css}" />
+</head>
+
+<body>
+    <div class="container">
+        <h1>Edit Product</h1>
+        <form th:action="@{/updateProduct}" th:object="${product}" method="post">
+            <!-- Hidden field for the product ID -->
+            <input type="hidden" th:field="*{id}" />
+            <label>Product Code:</label>
+            <input type="text" th:field="*{productCode}" />
+            <label>Product Brand:</label>
+            <input type="text" th:field="*{productBrand}" />
+            <label>Quantity in Hand:</label>
+            <input type="number" th:field="*{quantityInHand}" />
+            <label>Unit Price:</label>
+            <input type="number" step="0.01" th:field="*{unitPrice}" />
+            <button type="submit" class="click">Update</button>
+        </form>
+        <a th:href="@{/editableListOfProducts}">Cancel</a>
+    </div>
+    <div th:insert="fragments/footer :: footer"></div>
+</body>
+</html>

@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <title>Product By Brand</title>
+	<link rel="stylesheet" th:href="@{/css/main.css}" />
+</head>
+<body>
+    <div class="container">
+        <h1>Products by Brand</h1>
+        <table>
+            <tr>
+                <th>Product Code</th>
+                <th>Product Brand</th>
+                <th>Quantity In Hand</th>
+                <th>Unit Price</th>
+            </tr>
+            <tr th:each="product : ${products}">
+                <td th:text="${product.productCode}"></td>
+                <td th:text="${product.productBrand}"></td>
+                <td th:text="${product.quantityInHand}"></td>
+                <td th:text="${product.unitPrice}"></td>
+            </tr>
+        </table>
+        <a th:href="@{/productsByBrand}">Search Another Brand</a> | <a th:href="@{/index}">Home</a>
+    </div>
+     <div th:insert="fragments/footer :: footer"></div>
+</body>
+</html>

@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Footer</title>
+</head>
+<body>
+    <div class="footer" th:fragment="footer">
+    <!-- Display Logout Button If User Is Logged In -->
+        <div th:if="${#authentication.name != null}">
+            <a th:href="@{/logout}" class="logout-button">Logout</a>
+        </div>
+        <p>----------------------------------------------------------</p>
+        <p>PROG32758 Enterprise Java Development Fall 2024</p>
+        <p>Student Name: Kamrul Hasan</p>
+        <p>Student ID: 991769795</p>
+        <a th:href="@{/index}" class="action-button">Home</a>
+        <p>----------------------------------------------------------</p>
+       
+    </div>
+
+</body>
+</html>

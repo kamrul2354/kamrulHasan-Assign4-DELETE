@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <title>Search Products by Brand</title>
+	<link rel="stylesheet" th:href="@{/css/main.css}" />
+</head>
+<body>
+    <div class="container">
+        <h1>Search Products by Brand</h1>
+        <form th:action="@{/productsByBrand}" th:object="${product}" method="post">
+            <label>Product Brand:</label>
+            <input type="text" th:field="*{productBrand}" />
+            <button type="submit" class="click" >Search</button>
+        </form>
+        <a th:href="@{/index}">Home</a>
+    </div>
+    <div th:insert="fragments/footer :: footer"></div>
+</body>
+</html>

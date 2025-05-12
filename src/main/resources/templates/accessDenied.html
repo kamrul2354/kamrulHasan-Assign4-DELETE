@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <title>Access Denied</title>
+    <link rel="stylesheet" th:href="@{/css/main.css}" />
+</head>
+<body>
+    <div class="container">
+        <h1>Access Denied</h1>
+        <p>It looks like you don't have the necessary permissions to access this page.<br> 
+        If you believe this is a mistake or you need access, <br>
+        please contact the system administrator..</p>
+        <p><a th:href="@{/index}">Return to Home</a></p>
+    </div>
+    <div th:insert="fragments/footer :: footer"></div>
+</body>
+</html>

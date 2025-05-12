@@ -1,0 +1,14 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <title>Product Added</title>
+	<link rel="stylesheet" th:href="@{/css/main.css}" />
+</head>
+<body>
+    <div class="container">
+        <h1 th:text="${message}">Product Added Successfully!</h1>
+        <p><a th:href="@{/index}">Home</a></p>
+    </div>
+    <div th:insert="fragments/footer :: footer"></div>
+</body>
+</html>
