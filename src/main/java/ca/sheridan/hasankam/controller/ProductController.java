@@ -62,12 +62,12 @@ public class ProductController {
     }
 
 //    // Edit/Delete Product - ADMIN only
-//    @GetMapping("/editableListOfProducts")
-//    public String editableListOfProducts(Model model) {
-//        List<Product> products = pda.selectProducts();
-//        model.addAttribute("products", products);
-//        return "EditProduct/editableListOfProducts";
-//    }
+    @GetMapping("/editableListOfProducts")
+    public String editableListOfProducts(Model model) {
+        List<Product> products = pda.selectProducts();
+        model.addAttribute("products", products);
+        return "EditProduct/editableListOfProducts";
+    }
     
  // Edit Product List - ADMIN only
     @GetMapping("/listEditableProducts")
